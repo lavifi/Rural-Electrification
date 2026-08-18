@@ -17,8 +17,8 @@ confirm file `"`root'/figures/appendix/figureA5_GDP_comparison.png"'
 
 tempname handle
 file open `handle' using `"`root'/logs/verification.txt"', write text replace
-file write `handle' "PASS: dataset assertions completed" _n
-file write `handle' "PASS: all machine-generated article and appendix outputs exist" _n
+file write `handle' "PASS: all expected article and appendix table files exist" _n
+file write `handle' "PASS: all expected article and appendix figure files exist" _n
 file write `handle' "NOTE: numerical values are recorded in the generated LaTeX tables and analysis.log" _n
 file close `handle'
 display as result "Output verification passed."
