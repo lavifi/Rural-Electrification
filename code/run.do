@@ -14,6 +14,8 @@ foreach directory in data code tables figures logs {
         capture mkdir `"`root'/`directory'"'
     }
 }
+capture mkdir `"`root'/figures/main"'
+capture mkdir `"`root'/figures/appendix"'
 
 confirm file `"`root'/data/Villalobos_et_al_2026.dta"'
 foreach command in csdid2 csdid2_plot esttab estpost eststo estadd distinct ///

@@ -9,7 +9,3 @@ The published Table 2 reports 151 under “Number of properties” in its “All
 ## Static exhibits
 
 The original packet does not include the raw GIS layers/project or public-data acquisition scripts needed to regenerate article Figure 1, Appendix Figure A2, Appendix Figure A5, or Appendix Tables A1–A2. The final static exhibits and their source notes are supplied. See `MANIFEST.md`.
-
-## Historical filenames
-
-The final article inserted the study-area map as Figure 1. Several existing filenames retain earlier numbering: `figure1.pdf` is article Figure 2, `figure3.png` is article Figure 3, and `figure4.jpg` is article Figure 1. `REPLICATION.md` provides the authoritative mapping.

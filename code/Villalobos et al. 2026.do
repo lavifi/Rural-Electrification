@@ -241,15 +241,15 @@ estimates clear
 	file close t
 
 //------------------------------------------------------------------------------	
-// FIGURE 1 - EVENT-STUDY PLOT OF THE ATT OF ELECTRICITY ON DEFORESTATION (HA)
+// FIGURE 2 - EVENT-STUDY PLOT OF THE ATT OF ELECTRICITY ON DEFORESTATION (HA)
 //------------------------------------------------------------------------------		
 	graph use "$figures\plotwb_dMBdefor_sluilap_covs.gph" 
 	graph export "$figures\plotwb_dMBdefor_sluilap_covs.pdf", replace
 
 	graph combine "$figures\plotwb_dMBdefor_sluilap_covs.gph" , ///
 	graphregion(color(white))  col(1)   ycommon
-	graph save "$figures\figure1.gph", replace
-	graph export "$figures\figure1.pdf", replace
+	graph save "$figures\figure2_deforestation_event_study.gph", replace
+	graph export "$figures/main/figure2_deforestation_event_study.pdf", replace
 
 
 //------------------------------------------------------------------------------	
@@ -308,14 +308,14 @@ foreach s in sluilap {
 }
 
 //------------------------------------------------------------------------------	
-// FIGURE S1 - DEFORESTATION ANALYIS: EVENT-STUDY ESTIMATES AND SENSTIVITY
+// APPENDIX FIGURE A3 - DEFORESTATION EVENT STUDY AND SENSITIVITY
 //------------------------------------------------------------------------------
 	grc1leg ///
 	"$figures\power_dMBdefor_sluilap5.gph" , ///
 	graphregion(color(white)) xsize(6) ysize(8) iscale(.7) col(4)  ///
 	legendfrom("$figures\power_dMBdefor_sluilap5.gph") 
-	graph save "$figures\figureS1.gph",  replace
-	graph export "$figures\figureS1.png", width(1200) height(900) replace	
+	graph save "$figures\figureA3_deforestation_sensitivity.gph", replace
+	graph export "$figures/appendix/figureA3_deforestation_sensitivity.png", width(1200) height(900) replace
 
 		
 //------------------------------------------------------------------------------
@@ -578,7 +578,7 @@ foreach s in s_socio{
 //------------------------------------------------------------------------------
 
 //------------------------------------------------------------------------------	
-// FIGURE 2 - ATT OF ELECTRICITY ON SOCIOECONOMIC OUTCOMES
+// APPENDIX FIGURE A1 - ATT OF ELECTRICITY ON SOCIOECONOMIC OUTCOMES
 //------------------------------------------------------------------------------	
 	coefplot ///      
     (simpleincometot_s_socio, rename(SimpleATT  = "Total Income") color(navy))    ///
@@ -594,8 +594,8 @@ foreach s in s_socio{
 	xtitle("Average Treatment Effect on the Treated (ATT)")	///
 	graphregion(color(white)) ciopts(lwidth(*3) lcolor(navy%30))
 	
-	graph save $figures\figure2.gph,  replace
-	graph export $figures\figure2.png, width(1200) height(900) replace
+	graph save "$figures\figureA1_summary_ATT.gph", replace
+	graph export "$figures/appendix/figureA1_summary_ATT.png", width(1200) height(900) replace
 
 	
 //------------------------------------------------------------------------------	
@@ -611,11 +611,11 @@ foreach s in s_socio{
 	"$figures\plotwb_durelecwork_s_socio_covs.gph" ///
 	"$figures\plotwb_durelecplay_s_socio_covs.gph", ///
 	graphregion(color(white)) xsize(6) ysize(8) iscale(.7) col(4)  xcommon 
-	graph save "$figures\figure3.gph",  replace
-	graph export "$figures\figure3.png", width(1200) height(900) replace
+	graph save "$figures\figure3_socioeconomic_event_studies.gph", replace
+	graph export "$figures/main/figure3_socioeconomic_event_studies.png", width(1200) height(900) replace
 
 //------------------------------------------------------------------------------	
-// FIGURE S2 - SOCIOECONOMIC ANALYSIS: EVENT-STUDY ESTIMATES AND SENSTIVITY 
+// APPENDIX FIGURE A4 - SOCIOECONOMIC EVENT STUDIES AND SENSITIVITY
 //------------------------------------------------------------------------------	
 	grc1leg ///
 	"$figures\power_incometot_s_socio.gph" ///
@@ -628,8 +628,8 @@ foreach s in s_socio{
 	"$figures\power_durelecplay_s_socio.gph", ///
 	graphregion(color(white)) xsize(6) ysize(8) iscale(.7) col(4)  ///
 	legendfrom("$figures\power_incometot_s_socio.gph") xcommon 
-	graph save "$figures\figureS2.gph",  replace
-	graph export "$figures\figureS2.png", width(1200) height(900) replace	
+	graph save "$figures\figureA4_socioeconomic_sensitivity.gph", replace
+	graph export "$figures/appendix/figureA4_socioeconomic_sensitivity.png", width(1200) height(900) replace
 	
 		
 estimates clear	

@@ -6,9 +6,14 @@ args root
 foreach output in table1.tex table2.tex table3.tex table4.tex tableS3.tex tableS4.tex tableS5.tex {
     confirm file `"`root'/tables/`output'"'
 }
-foreach output in figure1.pdf figure2.png figure3.png figureS1.png figureS2.png {
-    confirm file `"`root'/figures/`output'"'
-}
+confirm file `"`root'/figures/main/figure1_study_area.jpg"'
+confirm file `"`root'/figures/main/figure2_deforestation_event_study.pdf"'
+confirm file `"`root'/figures/main/figure3_socioeconomic_event_studies.png"'
+confirm file `"`root'/figures/appendix/figureA1_summary_ATT.png"'
+confirm file `"`root'/figures/appendix/figureA2_grid_connection_map.jpg"'
+confirm file `"`root'/figures/appendix/figureA3_deforestation_sensitivity.png"'
+confirm file `"`root'/figures/appendix/figureA4_socioeconomic_sensitivity.png"'
+confirm file `"`root'/figures/appendix/figureA5_GDP_comparison.png"'
 
 tempname handle
 file open `handle' using `"`root'/logs/verification.txt"', write text replace

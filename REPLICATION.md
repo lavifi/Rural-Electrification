@@ -25,7 +25,7 @@ Expected runtime depends on hardware. The land-use panel contains 343,332 proper
 
 ## Output mapping
 
-The journal pre-print numbers the study-area map as Figure 1. Accordingly, the code’s historical filenames do not always equal the article number:
+Final figure filenames follow the numbering in the published paper:
 
 | Article exhibit | Generated or supplied file |
 |---|---|
@@ -33,17 +33,16 @@ The journal pre-print numbers the study-area map as Figure 1. Accordingly, the c
 | Table 2 | `tables/table2.tex` |
 | Table 3 | `tables/table3.tex` |
 | Table 4 | `tables/table4.tex` |
-| Figure 1 | `figures/figure4.jpg` (supplied GIS output) |
-| Figure 2 | `figures/figure1.pdf` |
-| Figure 3 | `figures/figure3.png` |
+| Figure 1 | `figures/main/figure1_study_area.jpg` (supplied GIS output) |
+| Figure 2 | `figures/main/figure2_deforestation_event_study.pdf` |
+| Figure 3 | `figures/main/figure3_socioeconomic_event_studies.png` |
 | Appendix Table A1 | `tables/t_des_census.tex` (supplied public-source table) |
 | Appendix Table A2 | `tables/t_interpolation.tex` (supplied GIS-method table) |
 | Appendix Table A3 | `tables/tableS3.tex` |
 | Appendix Table A4 | `tables/tableS4.tex` |
 | Appendix Table A5 | `tables/tableS5.tex` |
-| Appendix Figure A2 | `figures/figure5.jpg` (supplied GIS output) |
-| Appendix Figure A3 | `figures/figureS1.png` |
-| Appendix Figure A4 | `figures/figureS2.png` |
-| Appendix Figure A5 | `figures/figureS3.png` (supplied World Bank/OECD chart) |
-
-`figures/figure2.png` is an additional compact ATT plot used in the appendix compilation but not assigned a main-text number in the final pre-print.
+| Appendix Figure A1 | `figures/appendix/figureA1_summary_ATT.png` |
+| Appendix Figure A2 | `figures/appendix/figureA2_grid_connection_map.jpg` (supplied GIS output) |
+| Appendix Figure A3 | `figures/appendix/figureA3_deforestation_sensitivity.png` |
+| Appendix Figure A4 | `figures/appendix/figureA4_socioeconomic_sensitivity.png` |
+| Appendix Figure A5 | `figures/appendix/figureA5_GDP_comparison.png` (supplied World Bank/OECD chart) |

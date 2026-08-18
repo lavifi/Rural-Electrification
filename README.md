@@ -8,7 +8,8 @@ This repository reproduces the quantitative results in Laura Villalobos, Jill Ca
 - `code/run.do`: portable entry point for the complete Stata workflow.
 - `code/Villalobos et al. 2026.do`: analysis that produces the reported tables and figures.
 - `tables/`: machine-generated LaTeX tables plus two documented, externally sourced descriptive tables.
-- `figures/`: machine-generated figures and three documented externally produced figures.
+- `figures/main/`: final Figures 1–3, named to match the published paper.
+- `figures/appendix/`: final Appendix Figures A1–A5, named to match the published appendix.
 - `CODEBOOK.md`: variable definitions, samples, units, and missingness conventions.
 - `REPLICATION.md`: software requirements, runtime instructions, and exhibit mapping.
 - `MANIFEST.md`: provenance and reproducibility status of each reported exhibit.
