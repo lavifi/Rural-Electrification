@@ -13,4 +13,3 @@ The original packet does not include the raw GIS layers/project or public-data a
 ## Historical filenames
 
 The final article inserted the study-area map as Figure 1. Several existing filenames retain earlier numbering: `figure1.pdf` is article Figure 2, `figure3.png` is article Figure 3, and `figure4.jpg` is article Figure 1. `REPLICATION.md` provides the authoritative mapping.
-

@@ -29,7 +29,7 @@ The released Stata file reproduces Tables 1–4, Appendix Tables A3–A5, main F
 
 ## Data protection
 
-The public `id` is a randomly assigned, stable panel identifier. It replaces the original 11-digit lot code, which is excluded from version control because it encodes location-related information. The transformation changes no observations, outcomes, treatment variables, sample indicators, or time variables.
+The released data contain anonymous lot identifiers and no names, addresses, coordinates, or contact information. The identifiers are stable over time so that users can reproduce the panel estimators.
 
 ## Contact
 

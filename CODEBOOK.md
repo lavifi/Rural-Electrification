@@ -4,7 +4,7 @@ The dataset is an unbalanced property-year panel. A dot (`.`) is Stata numeric m
 
 | Variable | Definition |
 |---|---|
-| `id` | Randomly assigned public property identifier; stable over time. |
+| `id` | Anonymous lot identifier; stable over time. |
 | `year` | Calendar year, 1985–2020. |
 | `sett_year` | Settlement establishment year. |
 | `cattlelot` | Number of cattle owned on the property. |
@@ -40,5 +40,4 @@ The dataset is an unbalanced property-year panel. A dot (`.`) is Stata numeric m
 | `sluilap` | Indicator for the main land-use sample. |
 | `sluilsr` | Indicator for the self-reported-treatment-year robustness sample. |
 
-The dataset contains no names, addresses, coordinates, contact details, or original lot identifiers.
-
+The dataset contains no names, addresses, coordinates, or contact details.
