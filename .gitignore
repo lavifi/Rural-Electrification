@@ -1,0 +1,23 @@
+# Private source data and local audit artifacts
+source_data/
+audit_*.txt
+audit_*.log
+
+# Stata and LaTeX transient files
+*.smcl
+*.tmp
+logs/*.log
+latex/*.aux
+latex/*.bbl
+latex/*.blg
+latex/*.log
+latex/*.out
+latex/*.synctex.gz
+latex/
+figures/*.gph
+figures/plotwb_*
+figures/power_*
+
+# OS/editor files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite the article and this replication package."
+title: "Replication materials for: Rural Electrification in the Brazilian Amazon: No Environment-Development Tradeoff"
+type: dataset
+authors:
+  - family-names: Villalobos
+    given-names: Laura
+    email: lxvillalobos@salisbury.edu
+  - family-names: Caviglia-Harris
+    given-names: Jill
+  - family-names: Harris
+    given-names: Daniel
+  - family-names: Frey
+    given-names: Elaine
+version: 1.0.0
+date-released: 2026-08-18
+license: CC-BY-4.0
+preferred-citation:
+  type: article
+  title: "Rural Electrification in the Brazilian Amazon: No Environment-Development Tradeoff"
+  authors:
+    - family-names: Villalobos
+      given-names: Laura
+    - family-names: Caviglia-Harris
+      given-names: Jill
+    - family-names: Harris
+      given-names: Daniel
+    - family-names: Frey
+      given-names: Elaine
+  journal: Land Economics
+  year: 2026
+  doi: 10.3368/le.103.1.020926-0023
+

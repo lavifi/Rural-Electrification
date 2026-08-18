@@ -1,0 +1,17 @@
+{
+  "title": "Replication materials for: Rural Electrification in the Brazilian Amazon: No Environment-Development Tradeoff",
+  "upload_type": "dataset",
+  "description": "Data, Stata code, documentation, tables, and figures supporting Villalobos, Caviglia-Harris, Harris, and Frey (2026), Land Economics, doi:10.3368/le.103.1.020926-0023.",
+  "creators": [
+    {"name": "Villalobos, Laura", "affiliation": "Salisbury University"},
+    {"name": "Caviglia-Harris, Jill", "affiliation": "Salisbury University"},
+    {"name": "Harris, Daniel", "affiliation": "Salisbury University"},
+    {"name": "Frey, Elaine", "affiliation": "California State University, Fullerton"}
+  ],
+  "keywords": ["rural electrification", "deforestation", "Brazilian Amazon", "difference-in-differences", "replication data"],
+  "license": "cc-by-4.0",
+  "version": "1.0.0",
+  "related_identifiers": [
+    {"identifier": "10.3368/le.103.1.020926-0023", "relation": "isSupplementTo", "scheme": "doi"}
+  ]
+}
