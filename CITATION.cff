@@ -13,7 +13,6 @@ authors:
   - family-names: Frey
     given-names: Elaine
 version: 1.0.0
-date-released: 2026-08-18
 license: CC-BY-4.0
 preferred-citation:
   type: article
@@ -30,4 +29,3 @@ preferred-citation:
   journal: Land Economics
   year: 2026
   doi: 10.3368/le.103.1.020926-0023
-

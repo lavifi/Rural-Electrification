@@ -100,9 +100,9 @@ global opts2  a f plain coll(none) nodep nomti c(b(star fmt(%9.2f)) se(abs par f
 		stats(N N_id N_year, fmt(0) labels("Observations" "Number of properties" "Number of years")) ///
 		cells(mean(fmt(2)) sd(par)) nonumber compress noobs gap label booktabs ///
 		collabels(none) mtitle("(1)" "(2)" "(3)") ///
-		refcat(gvar_lu "{\addstackgap[6]A. Treatment}" ///
-			   dMBdefor "{\addstackgap[6]B. Outcome}" ///
-			   sett_year "{\addstackgap[6]C. Control variables}", nolabel) ///
+		refcat(gvar_lu "{\addstackgap[6pt]A. Treatment}" ///
+			   dMBdefor "{\addstackgap[6pt]B. Outcome}" ///
+			   sett_year "{\addstackgap[6pt]C. Control variables}", nolabel) ///
 		mgroups("\shortstack{All properties}"   , pattern(1) prefix(\multicolumn{@span}{c}{) suffix(}) span)
 
 		
@@ -407,9 +407,9 @@ foreach s in sluilap {
 			 labels("Observations" "Number of properties"))    					 ///
 		nonumber compress nonote noobs gap label booktabs                        ///
 		collabels(none) mtitle("(1)" "(2)" "(3)" "(4)")                          ///
-		refcat(elecyear2_dum "{\addstackgap[6]A. Treatment}"                     ///
-			   incometot      "{\addstackgap[6]B. Outcomes}"					 ///
-			   sett_year      "{\addstackgap[6]C. Control variables}", nolabel)  ///
+		refcat(elecyear2_dum "{\addstackgap[6pt]A. Treatment}"                     ///
+			   incometot      "{\addstackgap[6pt]B. Outcomes}"					 ///
+			   sett_year      "{\addstackgap[6pt]C. Control variables}", nolabel)  ///
 		mgroups("All years" "1996" "2000" "2005", pattern(1 1 1 1)               ///
 				prefix(\multicolumn{@span}{c}{) suffix(}) span)
 

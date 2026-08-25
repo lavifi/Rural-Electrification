@@ -3,12 +3,12 @@
 ## Software
 
 - Stata 19 (tested with Stata/SE 19.5 on Windows).
-- User-written Stata commands: `csdid2`, `estout`, `distinct`, `unique`, `coefplot`, `pretrends`, `grc1leg`, `reghdfe`, `wildbootstrap`, `boottest`, and `honestdid`.
-- A LaTeX distribution is optional and is needed only to rebuild the tables-and-figures PDF.
+- User-written Stata commands: `csdid2` (including `csdid2_plot`), `estout`, `distinct`, `unique`, `coefplot`, `pretrends`, `grc1leg`, `reghdfe`, `wildbootstrap`, `boottest`, and `honestdid`.
+- A LaTeX distribution is optional and is needed only to typeset the generated `.tex` tables in a separate document.
 
 The analysis stops with a readable error if the dataset or a required command is unavailable. Internet access is not required after the listed Stata packages have been installed.
 
-For a first-time setup, inspect and run `code/install_stata_packages.do` while connected to the internet. The successful verification run used `estout` 3.31, `unique` 1.2.4, `coefplot` 1.8.8, `pretrends` 0.5.1, `grc1leg` 1.0.5, `reghdfe` 6.12.5, and `honestdid` 1.3.0; the analysis log records the Stata environment used for the release.
+For a first-time setup, inspect and run `code/install_stata_packages.do` while connected to the internet. The successful verification run used `estout` 3.31, `unique` 1.2.4, `coefplot` 1.8.8, `pretrends` 0.5.1, `grc1leg` 1.0.5, `reghdfe` 6.12.5, and `honestdid` 1.3.0.
 
 ## Run
 
@@ -20,7 +20,7 @@ Expected runtime depends on hardware. The land-use panel contains 343,332 proper
 
 - Full released panel: 343,332 observations, 9,537 properties, 1985–2020.
 - Main land-use sample: 304,920 observations, 8,470 properties, 36 years.
-- Socioeconomic descriptive sample: 458 observations across the 1996, 2000, and 2005 survey waves.
+- Socioeconomic panel sample: 468 observations from 156 properties across the 1996, 2000, and 2005 survey waves; total income is nonmissing for the 458 rows used in Table 2.
 - Socioeconomic estimation sample: 330 household-year observations from 110 households not treated in 1996 and observed at least twice.
 
 ## Output mapping

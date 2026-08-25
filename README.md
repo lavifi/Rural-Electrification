@@ -4,7 +4,7 @@ This repository reproduces the quantitative results in Laura Villalobos, Jill Ca
 
 ## Contents
 
-- `data/Villalobos_et_al_2026.dta`: analysis-ready, de-identified property-year panel.
+- `data/Villalobos_et_al_2026.dta`: analysis-ready, de-identified property-year panel containing 37 documented variables.
 - `code/run.do`: portable entry point for the complete Stata workflow.
 - `code/Villalobos et al. 2026.do`: analysis that produces the reported tables and figures.
 - `tables/`: machine-generated LaTeX tables plus two documented, externally sourced descriptive tables.
@@ -26,7 +26,7 @@ The entry point accepts paths containing spaces. It reads the released dataset, 
 
 ## Reproducibility scope
 
-The released Stata file reproduces Tables 1–4, Appendix Tables A3–A5, main Figures 2–3, and Appendix Figures A3–A4. Main Figure 1, Appendix Figure A2, Appendix Figure A5, and Appendix Tables A1–A2 use GIS or public-source inputs that are not contained in the analysis dataset; their provenance is documented in `MANIFEST.md`. The package includes their final static files where available.
+The released Stata file reproduces Tables 1–4, Appendix Tables A3–A5, main Figures 2–3, and Appendix Figures A1, A3, and A4. Main Figure 1, Appendix Figure A2, Appendix Figure A5, and Appendix Tables A1–A2 use GIS or public-source inputs that are not contained in the analysis dataset; their provenance is documented in `MANIFEST.md`. The package includes their final static files.
 
 ## Data protection
 

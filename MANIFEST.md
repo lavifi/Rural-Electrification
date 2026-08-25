@@ -2,7 +2,7 @@
 
 ## Fully reproduced from the released dataset
 
-The master Stata script regenerates article Tables 1–4; Appendix Tables A3–A5; article Figures 2–3; and Appendix Figures A3–A4. Intermediate `.gph` files are retained to make Stata graph editing possible.
+The master Stata script regenerates article Tables 1–4; Appendix Tables A3–A5; article Figures 2–3; and Appendix Figures A1, A3, and A4. Stata also creates intermediate `.gph` files during execution; these are excluded from the public release because the final numbered figures are supplied in standard image or PDF formats.
 
 ## Supplied static outputs
 
