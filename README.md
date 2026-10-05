@@ -13,16 +13,36 @@ This repository reproduces the quantitative results in Laura Villalobos, Jill Ca
 - `CODEBOOK.md`: variable definitions, samples, units, and missingness conventions.
 - `REPLICATION.md`: software requirements, runtime instructions, and exhibit mapping.
 - `MANIFEST.md`: provenance and reproducibility status of each reported exhibit.
+- `output/pdf/Replication_Documentation.pdf`: PDF copy of the README, reproduction instructions, codebook, manifest, and known-issues notes.
 
 ## Quick start
 
-Stata 19 is recommended. From a terminal, replace the path below with the absolute path to this repository:
+Stata 19 is recommended.
 
-```text
-StataSE-64.exe /e do "<replication-root>/code/run.do" "<replication-root>"
+1. Download the repository ZIP from GitHub.
+2. Right-click the ZIP and select **Extract All**. Do not open or run `run.do` from inside the compressed ZIP folder, because Windows may use a temporary path that Stata cannot find later.
+3. Open Stata.
+4. If this is the first run, enter the following in Stata's **Command** window, replacing `FULL-PATH` with the location of the extracted folder:
+
+```stata
+do "FULL-PATH/code/install_stata_packages.do"
 ```
 
-The entry point accepts paths containing spaces. It reads the released dataset, overwrites generated tables and figures in place, and writes `logs/analysis.log`. No code edits are required.
+5. Enter the following as one command in Stata's **Command** window:
+
+```stata
+do "FULL-PATH/code/run.do" "FULL-PATH"
+```
+
+For example:
+
+```stata
+do "C:/Users/username/Downloads/Rural-Electrification-main/code/run.do" "C:/Users/username/Downloads/Rural-Electrification-main"
+```
+
+The first path identifies the do-file. The second path is not another do-file: it tells the script where the replication-package root is located. That root folder must contain `README.md`, `code`, `data`, `figures`, and `tables`. Opening `run.do` and clicking Stata's Run button without supplying the second path is not sufficient.
+
+The entry point accepts paths containing spaces. It reads the released dataset, overwrites generated tables and figures in place, and writes `logs/analysis.log`. No code edits are required. All analysis is written in Stata; the `.md` files are documentation, not R Markdown programs.
 
 ## Reproducibility scope
 

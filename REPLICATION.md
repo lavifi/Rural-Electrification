@@ -12,7 +12,23 @@ For a first-time setup, inspect and run `code/install_stata_packages.do` while c
 
 ## Run
 
-Execute `code/run.do` and pass the absolute replication-root path as its only argument. The master script uses a fixed bootstrap seed (`123456789`) and overwrites generated outputs. A text log is written to `logs/analysis.log`.
+If the repository was downloaded as a ZIP file, first right-click the ZIP and select **Extract All**. Do not run the code from inside the compressed ZIP folder: Windows may open it from a temporary location that Stata cannot find later.
+
+Open Stata and enter the following as one command in the **Command** window:
+
+```stata
+do "FULL-PATH/code/run.do" "FULL-PATH"
+```
+
+Replace both instances of `FULL-PATH` with the absolute path to the extracted replication folder. For example:
+
+```stata
+do "C:/Users/username/Downloads/Rural-Electrification-main/code/run.do" "C:/Users/username/Downloads/Rural-Electrification-main"
+```
+
+The first quoted path identifies `run.do`. The second quoted path is the script's root-directory argument, not another do-file. It must identify the folder containing `README.md`, `code`, `data`, `figures`, and `tables`. Opening `run.do` in the Do-file Editor and clicking Run without passing that argument will produce an error.
+
+The master script uses a fixed bootstrap seed (`123456789`) and overwrites generated outputs. A text log is written to `logs/analysis.log`.
 
 Expected runtime depends on hardware. The land-use panel contains 343,332 property-year observations, and repeated bootstrap inference is the slowest stage.
 
