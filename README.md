@@ -19,16 +19,18 @@ This repository reproduces the quantitative results in Laura Villalobos, Jill Ca
 
 Stata 19 is recommended.
 
-1. Download the repository ZIP from GitHub.
-2. Right-click the ZIP and select **Extract All**. Do not open or run `run.do` from inside the compressed ZIP folder, because Windows may use a temporary path that Stata cannot find later.
-3. Open Stata.
-4. If this is the first run, enter the following in Stata's **Command** window, replacing `FULL-PATH` with the location of the extracted folder:
+1. Open the repository's [main GitHub page](https://github.com/lavifi/Rural-Electrification).
+2. Above the repository file list, click the green **Code** button, then select **Download ZIP**. This is the green GitHub button, not the folder named `code` in the repository.
+3. Right-click the downloaded ZIP and select **Extract All**. Do not open or run `run.do` from inside the compressed ZIP folder, because Windows may use a temporary path that Stata cannot find later.
+4. Open Stata.
+5. Identify the full path to the extracted root folder. The root is the folder containing `README.md` and the `code`, `data`, `figures`, and `tables` subfolders. You must replace `FULL-PATH` in the commands below with this folder path.
+6. If this is the first run, enter the following in Stata's **Command** window:
 
 ```stata
 do "FULL-PATH/code/install_stata_packages.do"
 ```
 
-5. Enter the following as one command in Stata's **Command** window:
+7. Enter the following as one command in Stata's **Command** window:
 
 ```stata
 do "FULL-PATH/code/run.do" "FULL-PATH"
@@ -40,7 +42,7 @@ For example:
 do "C:/Users/username/Downloads/Rural-Electrification-main/code/run.do" "C:/Users/username/Downloads/Rural-Electrification-main"
 ```
 
-The first path identifies the do-file. The second path is not another do-file: it tells the script where the replication-package root is located. That root folder must contain `README.md`, `code`, `data`, `figures`, and `tables`. Opening `run.do` and clicking Stata's Run button without supplying the second path is not sufficient.
+`FULL-PATH` is a placeholder that the user must replace; it is not a literal folder name. The first path identifies the do-file. The second path is not another do-file: it passes the user-supplied root folder to the script. Opening `run.do` and clicking Stata's Run button without supplying the second path is not sufficient.
 
 The entry point accepts paths containing spaces. It reads the released dataset, overwrites generated tables and figures in place, and writes `logs/analysis.log`. No code edits are required. All analysis is written in Stata; the `.md` files are documentation, not R Markdown programs.
 

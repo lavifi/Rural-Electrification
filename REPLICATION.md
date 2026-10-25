@@ -12,7 +12,11 @@ For a first-time setup, inspect and run `code/install_stata_packages.do` while c
 
 ## Run
 
-If the repository was downloaded as a ZIP file, first right-click the ZIP and select **Extract All**. Do not run the code from inside the compressed ZIP folder: Windows may open it from a temporary location that Stata cannot find later.
+To download the package as a ZIP, open the repository's [main GitHub page](https://github.com/lavifi/Rural-Electrification), click the green **Code** button above the file list, and select **Download ZIP**. This means GitHub's green button, not the repository folder named `code`.
+
+Right-click the downloaded ZIP and select **Extract All**. Do not run the code from inside the compressed ZIP folder: Windows may open it from a temporary location that Stata cannot find later.
+
+Identify the full path to the extracted root folder. The root is the folder containing `README.md` and the `code`, `data`, `figures`, and `tables` subfolders. `FULL-PATH` below is a placeholder that the user must replace with this folder path.
 
 Open Stata and enter the following as one command in the **Command** window:
 
@@ -26,7 +30,7 @@ Replace both instances of `FULL-PATH` with the absolute path to the extracted re
 do "C:/Users/username/Downloads/Rural-Electrification-main/code/run.do" "C:/Users/username/Downloads/Rural-Electrification-main"
 ```
 
-The first quoted path identifies `run.do`. The second quoted path is the script's root-directory argument, not another do-file. It must identify the folder containing `README.md`, `code`, `data`, `figures`, and `tables`. Opening `run.do` in the Do-file Editor and clicking Run without passing that argument will produce an error.
+The first quoted path identifies `run.do`. The second quoted path is the user-supplied root-directory argument, not another do-file. Opening `run.do` in the Do-file Editor and clicking Run without passing that argument will produce an error.
 
 The master script uses a fixed bootstrap seed (`123456789`) and overwrites generated outputs. A text log is written to `logs/analysis.log`.
 
