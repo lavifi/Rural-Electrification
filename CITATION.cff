@@ -14,6 +14,8 @@ authors:
     given-names: Elaine
 version: 1.0.0
 license: CC-BY-4.0
+doi: 10.5281/zenodo.23672131
+repository-code: "https://github.com/lavifi/Rural-Electrification"
 preferred-citation:
   type: article
   title: "Rural Electrification in the Brazilian Amazon: No Environment-Development Tradeoff"
