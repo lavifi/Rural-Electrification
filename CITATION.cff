@@ -12,9 +12,9 @@ authors:
     given-names: Daniel
   - family-names: Frey
     given-names: Elaine
-version: 1.0.0
+version: 1.0.2
 license: CC-BY-4.0
-doi: 10.5281/zenodo.23672131
+doi: 10.5281/zenodo.23672130
 repository-code: "https://github.com/lavifi/Rural-Electrification"
 preferred-citation:
   type: article

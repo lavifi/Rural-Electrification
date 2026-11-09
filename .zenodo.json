@@ -10,7 +10,7 @@
   ],
   "keywords": ["rural electrification", "deforestation", "Brazilian Amazon", "difference-in-differences", "replication data"],
   "license": "cc-by-4.0",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "related_identifiers": [
     {"identifier": "10.3368/le.103.1.020926-0023", "relation": "isSupplementTo", "scheme": "doi"}
   ]

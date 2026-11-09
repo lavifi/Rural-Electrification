@@ -1,10 +1,10 @@
 # Replication package: Rural Electrification in the Brazilian Amazon
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23672131.svg)](https://doi.org/10.5281/zenodo.23672131)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23672130.svg)](https://doi.org/10.5281/zenodo.23672130)
 
 This repository reproduces the quantitative results in Laura Villalobos, Jill Caviglia-Harris, Daniel Harris, and Elaine Frey, “Rural Electrification in the Brazilian Amazon: No Environment-Development Tradeoff,” *Land Economics* (2026), https://doi.org/10.3368/le.103.1.020926-0023.
 
-The permanent archived version of this replication package is available from Zenodo at https://doi.org/10.5281/zenodo.23672131.
+All archived versions of this replication package are available from Zenodo at https://doi.org/10.5281/zenodo.23672130. This DOI always resolves to the latest archived version.
 
 ## Contents
 
