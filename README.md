@@ -48,7 +48,12 @@ do "C:/Users/username/Downloads/Rural-Electrification-main/code/run.do" "C:/User
 
 `FULL-PATH` is a placeholder that the user must replace; it is not a literal folder name. The first path identifies the do-file. The second path is not another do-file: it passes the user-supplied root folder to the script. Opening `run.do` and clicking Stata's Run button without supplying the second path is not sufficient.
 
-The entry point accepts paths containing spaces. It reads the released dataset, overwrites generated tables and figures in place, and writes `logs/analysis.log`. No code edits are required. All analysis is written in Stata; the `.md` files are documentation, not R Markdown programs.
+The entry point accepts paths containing spaces. It reads the released dataset,
+writes generated tables and figures to `logs/output_staging`, verifies that the
+current run created the complete expected set, and only then replaces the
+released copies. It writes `logs/analysis.log` and `logs/verification.txt`. No
+code edits are required. All analysis is written in Stata; the `.md` files are
+documentation, not R Markdown programs.
 
 ## Reproducibility scope
 

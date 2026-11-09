@@ -4,16 +4,17 @@ clear all
 set more off
 capture log close _all
 
-args folder
+args folder outputroot
 if `"`folder'"' == "" {
 	display as error "Replication root not supplied. Run: do code/run.do <replication-root>"
 	exit 198
 }
+if `"`outputroot'"' == "" local outputroot `"`folder'"'
 
 global folder `"`folder'"'
-global data $folder/data
-global figures $folder/figures
-global tables $folder/tables
+global data `"$folder/data"'
+global figures `"`outputroot'/figures"'
+global tables `"`outputroot'/tables"'
 
 capture mkdir "$folder/logs"
 log using "$folder/logs/analysis.log", text replace name(analysis)
@@ -463,7 +464,7 @@ foreach s in s_socio{
 	scalar power`var'_`s'=r(slope)
 
 	pretrends, pre(3) post(4/5) slope(`r(slope)') coefplot graphregion(color(white))  title(`label', size(medium))  ytitle("Marginal Effect") xtitle("Periods to treatment")
-	graph save $figures\power_`var'_`s'.gph,  replace
+	graph save "$figures/power_`var'_`s'.gph", replace
 	
 	}	
 	restore
