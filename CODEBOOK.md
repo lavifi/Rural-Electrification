@@ -63,7 +63,8 @@ The component-sum identity for `incometot` holds up to floating-point rounding i
 | `durelecwork` | Work-appliance count: `fridge + fans + washers + microwaves + milktanks`. |
 | `durelecplay` | Leisure-appliance count: `tvs + phones + cell`. |
 
-The two appliance-index identities hold exactly in the released data.
+The two appliance-index identities hold exactly within the socioeconomic
+analysis sample (`s_socio == 1`), where these outcomes are analyzed.
 
 ### Livestock and milk production
 

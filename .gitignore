@@ -8,6 +8,7 @@ audit_*.log
 *.tmp
 logs/*.log
 logs/verification.txt
+logs/output_staging/
 latex/*.aux
 latex/*.bbl
 latex/*.blg

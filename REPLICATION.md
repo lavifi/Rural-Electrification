@@ -8,7 +8,17 @@
 
 The analysis stops with a readable error if the dataset or a required command is unavailable. Internet access is not required after the listed Stata packages have been installed.
 
-For a first-time setup, inspect and run `code/install_stata_packages.do` while connected to the internet. The successful verification run used `estout` 3.31, `unique` 1.2.4, `coefplot` 1.8.8, `pretrends` 0.5.1, `grc1leg` 1.0.5, `reghdfe` 6.12.5, and `honestdid` 1.3.0.
+For a first-time setup, inspect and run `code/install_stata_packages.do` while
+connected to the internet. The verified environment used `csdid2` 1.3,
+`estout` 3.31, `distinct` 1.2.1, `unique` 1.2.4, `coefplot` 1.8.8,
+`pretrends` 0.5.1, `grc1leg` 1.0.5, `reghdfe` 6.12.5,
+`wildbootstrap` 1.2.5, `boottest` 4.5.0, and `honestdid` 1.3.0.
+
+The SSC and web installation locations serve their current package releases;
+they do not provide an immutable lockfile or guarantee that these historical
+versions remain installable. The versions above document the environment used
+for verification. Future reruns should compare the version comments reported
+by Stata's `which command-name` output with this list.
 
 ## Run
 
@@ -23,6 +33,11 @@ Open Stata and enter the following as one command in the **Command** window:
 ```stata
 do "FULL-PATH/code/run.do" "FULL-PATH"
 ```
+
+Generated tables and figures are first written under
+`logs/output_staging`. The entry point verifies that the current run created
+the complete generated-output set before replacing the released copies.
+Supplied static exhibits are also checked but are not regenerated.
 
 Replace both instances of `FULL-PATH` with the absolute path to the extracted replication folder. For example:
 

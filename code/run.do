@@ -41,6 +41,33 @@ foreach directory in data code tables figures logs {
 capture mkdir `"`root'/figures/main"'
 capture mkdir `"`root'/figures/appendix"'
 
+* Generate outputs away from the released final filenames. A failed analysis
+* can therefore leave only staged files, not a partial file that looks final.
+local staging `"`root'/logs/output_staging"'
+capture mkdir `"`staging'"'
+capture mkdir `"`staging'/tables"'
+capture mkdir `"`staging'/figures"'
+capture mkdir `"`staging'/figures/main"'
+capture mkdir `"`staging'/figures/appendix"'
+
+local generated_tables table1.tex table2.tex table3.tex table4.tex ///
+    tableS3.tex tableS4.tex tableS5.tex
+local generated_main figure2_deforestation_event_study.pdf ///
+    figure3_socioeconomic_event_studies.png
+local generated_appendix figureA1_summary_ATT.png ///
+    figureA3_deforestation_sensitivity.png ///
+    figureA4_socioeconomic_sensitivity.png
+
+foreach output of local generated_tables {
+    capture erase `"`staging'/tables/`output'"'
+}
+foreach output of local generated_main {
+    capture erase `"`staging'/figures/main/`output'"'
+}
+foreach output of local generated_appendix {
+    capture erase `"`staging'/figures/appendix/`output'"'
+}
+
 confirm file `"`root'/data/Villalobos_et_al_2026.dta"'
 foreach command in csdid2 csdid2_plot esttab estpost eststo estadd distinct ///
     unique coefplot pretrends grc1leg reghdfe wildbootstrap boottest honestdid {
@@ -52,6 +79,23 @@ foreach command in csdid2 csdid2_plot esttab estpost eststo estadd distinct ///
 }
 
 do `"`root'/code/validate_data.do"' `"`root'"'
-do `"`root'/code/Villalobos et al. 2026.do"' `"`root'"'
-do `"`root'/code/verify_outputs.do"' `"`root'"'
+do `"`root'/code/Villalobos et al. 2026.do"' `"`root'"' `"`staging'"'
+
+* Confirm that this run created every generated artifact before replacing any
+* released output. The final verification below also checks supplied exhibits.
+do `"`root'/code/verify_outputs.do"' `"`root'"' `"`staging'"' 0
+
+foreach output of local generated_tables {
+    copy `"`staging'/tables/`output'"' `"`root'/tables/`output'"', replace
+}
+foreach output of local generated_main {
+    copy `"`staging'/figures/main/`output'"' ///
+        `"`root'/figures/main/`output'"', replace
+}
+foreach output of local generated_appendix {
+    copy `"`staging'/figures/appendix/`output'"' ///
+        `"`root'/figures/appendix/`output'"', replace
+}
+
+do `"`root'/code/verify_outputs.do"' `"`root'"' `"`root'"' 1
 exit
